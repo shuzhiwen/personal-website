@@ -1,0 +1,22 @@
+::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  margin: 5vh;
+  height: 90vh;
+  border-radius: 8px;
+  background-color: white;
+  border: 1px lightgray solid;
+}
+
+.content {
+  height: 100%;
+  display: grid;
+  place-content: center;
+  overflow: scroll;
+}
+
+.processBar {
+  height: 0.5px;
+}

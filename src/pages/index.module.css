@@ -1,0 +1,16 @@
+.disabledTip {
+  width: '100%';
+  height: '100%';
+  display: 'flex';
+  justify-content: 'center';
+  align-items: 'center';
+  font-size: '14px';
+}
+
+.pageContainer {
+  display: 'flex';
+  flex-direction: 'column';
+  justify-content: 'space-around';
+  align-items: 'center';
+  margin: '5vh';
+}
