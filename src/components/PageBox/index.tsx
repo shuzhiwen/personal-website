@@ -1,6 +1,6 @@
 import {ReactNode, useCallback, useState} from 'react'
 import {ProgressBar} from 'react-bootstrap'
-import {FadeIn} from '../Animation'
+import {FadeSlideIn} from '../Animation'
 import styles from './index.module.css'
 
 export function PageBox(props: {children: ReactNode}) {
@@ -13,11 +13,11 @@ export function PageBox(props: {children: ReactNode}) {
   }, [])
 
   return (
-    <FadeIn>
+    <FadeSlideIn>
       <div onScroll={handleScroll} className={styles.container}>
         <ProgressBar now={progress} className={styles.processBar} />
         <div className={styles.content}>{props.children}</div>
       </div>
-    </FadeIn>
+    </FadeSlideIn>
   )
 }

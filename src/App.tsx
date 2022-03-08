@@ -1,7 +1,7 @@
 import {Suspense, useState} from 'react'
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
 import {Card, ListGroup, ListGroupItem} from 'react-bootstrap'
-import {FadeIn, Placeholder} from './components'
+import {FadeSlideIn, Placeholder} from './components'
 import {About, Article, Living, Music} from './pages'
 import aboutImage from '../assets/images/about.jpg'
 import articleImage from '../assets/images/article.jpg'
@@ -54,7 +54,7 @@ function Section(props: {
 
 function Home() {
   return (
-    <FadeIn className={styles.container}>
+    <FadeSlideIn className={styles.container}>
       <Section
         title="主食"
         description="切勿失去对生活的感知力"
@@ -83,7 +83,7 @@ function Home() {
         image={aboutImage}
         summaries={getAboutSummary()}
       />
-    </FadeIn>
+    </FadeSlideIn>
   )
 }
 
@@ -91,7 +91,7 @@ export function App() {
   return (
     <Router>
       <Switch>
-        <Suspense fallback={<div>加载中...</div>}>
+        <Suspense fallback={<div className={styles.fallback}>加载中...</div>}>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/article" component={Article} />

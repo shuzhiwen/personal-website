@@ -2,7 +2,7 @@ import {useEffect, useRef, ReactNode} from 'react'
 import anime from 'animejs'
 import styles from './index.module.css'
 
-export function FadeIn(props: {className?: string; children: ReactNode}) {
+export function FadeSlideIn(props: {className?: string; children: ReactNode}) {
   const {className, children} = props
   const ref = useRef<HTMLDivElement>(null)
 
