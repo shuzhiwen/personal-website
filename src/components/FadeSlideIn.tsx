@@ -1,6 +1,6 @@
 import {useEffect, useRef, ReactNode} from 'react'
 import anime from 'animejs'
-import styles from './index.module.css'
+import {Box} from '@mui/material'
 
 export function FadeSlideIn(props: {className?: string; children: ReactNode}) {
   const {className, children} = props
@@ -17,8 +17,8 @@ export function FadeSlideIn(props: {className?: string; children: ReactNode}) {
   }, [])
 
   return (
-    <div ref={ref} className={`${className} ${styles.hide}`}>
+    <Box ref={ref} className={className}>
       {children}
-    </div>
+    </Box>
   )
 }

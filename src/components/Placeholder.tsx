@@ -1,8 +1,8 @@
 import {ReactNode, Fragment} from 'react'
 import ReactPlaceholder from 'react-placeholder'
 import {RectShape} from 'react-placeholder/lib/placeholders'
-import styles from './index.module.css'
 import 'react-placeholder/lib/reactPlaceholder.css'
+import {Box} from '@mui/material'
 
 export function Placeholder(props: {loaded: boolean; height: number; children: ReactNode}) {
   const {loaded, height, children} = props
@@ -20,7 +20,7 @@ export function Placeholder(props: {loaded: boolean; height: number; children: R
       >
         {null}
       </ReactPlaceholder>
-      <div className={loaded ? styles.show : styles.hide}>{children}</div>
+      <Box sx={{display: loaded ? 'block' : 'none'}}>{children}</Box>
     </Fragment>
   )
 }

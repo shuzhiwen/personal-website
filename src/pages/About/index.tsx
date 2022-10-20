@@ -1,23 +1,24 @@
-import {PageBox} from '../../components/PageBox'
-import styles from './index.module.css'
+import {Stack, styled} from '@mui/system'
+import {Typography as MuiTypography} from '@mui/material'
+import {PageBox} from '../../components'
+
+const Typography = styled(MuiTypography)({
+  fontFamily: 'pixel',
+  fontWeight: 'bold',
+})
 
 export function About() {
   return (
     <PageBox>
-      <div className={styles.container}>
-        <h4>嗯...这是一个个人网站</h4>
-        <p />
-        <p>我的联系方式</p>
-        <p>谷邮: yuwen4012@gmail.com</p>
-        <p />
-        <h4>如果你也是开发者</h4>
-        <p />
-        <p>欢迎和我交流</p>
-        <p />
-        <h4>一个喜欢文科的理科生</h4>
-        <p />
-        <p>爱好音乐剧、电影、阅读...也喜欢打游戏</p>
-      </div>
+      <Stack spacing={2}>
+        <Typography variant="h6">嗯...这是一个个人网站</Typography>
+        <Typography>我的联系方式</Typography>
+        <Typography>谷邮: yuwen4012@gmail.com</Typography>
+        <Typography variant="h6">如果你也是开发者</Typography>
+        <Typography>欢迎和我交流</Typography>
+        <Typography variant="h6">一个喜欢文科的理科生</Typography>
+        <Typography>爱好音乐剧、电影、阅读...也喜欢打游戏</Typography>
+      </Stack>
     </PageBox>
   )
 }

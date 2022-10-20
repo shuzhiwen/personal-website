@@ -8,12 +8,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/material": "^5.10.10",
     "animejs": "^3.2.1",
-    "bootstrap": "^4.5.0",
     "lodash-es": "^4.17.21",
     "particles-bg": "^2.5.0",
     "react": "^16.13.1",
-    "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1",
     "react-placeholder": "^4.0.3",
     "react-router-dom": "^5.2.0"

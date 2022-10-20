@@ -1,3 +1,0 @@
-.container {
-  composes: disabledTip from '../index.module.css';
-}
