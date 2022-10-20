@@ -63,35 +63,56 @@ function Section(props: {
 
 export function Home() {
   return (
-    <FadeSlideIn className={s.pageContainer}>
-      <Section
-        title="主食"
-        description="切勿失去对生活的感知力"
-        pageUrl="/living"
-        image={livingImage}
-        summaries={getLivingSummary()}
-      />
-      <Section
-        title="调味料"
-        description="为什么不来点音乐？"
-        pageUrl="/music"
-        image={musicImage}
-        summaries={getMusicSummary()}
-      />
-      <Section
-        title="甜品"
-        description="爱，原来是一场自我教育"
-        pageUrl="/article"
-        image={articleImage}
-        summaries={getArticleSummary()}
-      />
-      <Section
-        title="来壶茶"
-        description="猫猫这么可爱，不点一下吗？"
-        pageUrl="/about"
-        image={aboutImage}
-        summaries={getAboutSummary()}
-      />
-    </FadeSlideIn>
+    <Stack height="100vh" overflow="auto">
+      <FadeSlideIn className={s.pageContainer}>
+        <Section
+          title="主食"
+          description="切勿失去对生活的感知力"
+          pageUrl="/living"
+          image={livingImage}
+          summaries={getLivingSummary()}
+        />
+        <Section
+          title="调味料"
+          description="为什么不来点音乐？"
+          pageUrl="/music"
+          image={musicImage}
+          summaries={getMusicSummary()}
+        />
+        <Section
+          title="甜品"
+          description="爱，原来是一场自我教育"
+          pageUrl="/article"
+          image={articleImage}
+          summaries={getArticleSummary()}
+        />
+        <Section
+          title="来壶茶"
+          description="猫猫这么可爱，不点一下吗？"
+          pageUrl="/about"
+          image={aboutImage}
+          summaries={getAboutSummary()}
+        />
+      </FadeSlideIn>
+      <Footer />
+    </Stack>
+  )
+}
+
+export function Footer() {
+  return (
+    <Stack width="100%" alignItems="center" pb={1}>
+      <a
+        href="https://beian.miit.gov.cn/"
+        target="_blank"
+        style={{
+          width: 'fit-content',
+          textDecoration: 'none',
+          fontSize: 12,
+        }}
+      >
+        浙ICP备20015270号-1
+      </a>
+    </Stack>
   )
 }

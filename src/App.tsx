@@ -1,6 +1,6 @@
 import {Box} from '@mui/system'
 import {Suspense} from 'react'
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import {Home} from './pages'
 import {About} from './pages/About'
 import {Article} from './pages/Article'
@@ -11,7 +11,7 @@ import ParticlesBg from 'particles-bg'
 export function App() {
   return (
     <Box>
-      <Router>
+      <BrowserRouter>
         <Switch>
           <Suspense fallback={<div className="m-center">加载中...</div>}>
             <Route exact path="/" component={Home} />
@@ -21,8 +21,8 @@ export function App() {
             <Route path="/music" component={Music} />
           </Suspense>
         </Switch>
-      </Router>
-      {/* <ParticlesBg type="random" bg={true} /> */}
+      </BrowserRouter>
+      <ParticlesBg type="random" bg={true} />
     </Box>
   )
 }
