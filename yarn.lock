@@ -416,6 +416,11 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
+"@micro-zoe/micro-app@^1.0.0-alpha.10":
+  version "1.0.0-alpha.10"
+  resolved "https://registry.yarnpkg.com/@micro-zoe/micro-app/-/micro-app-1.0.0-alpha.10.tgz#3e797ac1fff89767c5a3035f05924edf8677cf4d"
+  integrity sha512-8pILuTZyoFOm0itZ6a78AkNqfsyZhGpNkH5oMk+22Bz3xyRlplRpvjujjtEgkg06rCFHWYwvttiV03UQ2aqh1Q==
+
 "@mui/base@5.0.0-alpha.102":
   version "5.0.0-alpha.102"
   resolved "https://registry.yarnpkg.com/@mui/base/-/base-5.0.0-alpha.102.tgz#53b07d0b73d3afe1d2a3feb3b43c8188bb821796"

@@ -19,6 +19,9 @@ export function App() {
             <Route path="/article" component={Article} />
             <Route path="/living" component={Living} />
             <Route path="/music" component={Music} />
+            <Route path="/app/chart">
+              <micro-app name="chart" url="//localhost:9527" baseroute="/app/chart" />
+            </Route>
           </Suspense>
         </Switch>
       </BrowserRouter>
