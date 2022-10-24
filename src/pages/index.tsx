@@ -104,6 +104,7 @@ export function Footer() {
     <Stack width="100%" alignItems="center" pb={1}>
       <a
         href="https://beian.miit.gov.cn/"
+        rel="noreferrer"
         target="_blank"
         style={{
           width: 'fit-content',
