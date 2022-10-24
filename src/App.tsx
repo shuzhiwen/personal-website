@@ -8,7 +8,7 @@ import {Living} from './pages/Living'
 import {Music} from './pages/Music'
 import ParticlesBg from 'particles-bg'
 
-const appConfigs = [['/app/chart', window.location.origin + ':9527/app/chart']]
+const appConfigs = [['/subapp/chart', window.location.origin + ':9527/app/chart']]
 
 export function AppRoutes() {
   return (
