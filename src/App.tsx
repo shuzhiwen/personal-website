@@ -8,7 +8,11 @@ import {Living} from './pages/Living'
 import {Music} from './pages/Music'
 import ParticlesBg from 'particles-bg'
 
-const appConfigs = [['/subapp/chart', window.location.origin.replace(/:\d+/, '') + ':9527']]
+const appConfigs = [
+  ['/subapp/chart', window.location.origin.replace(/:\d+/, '') + ':9001'],
+  ['/subapp/reserve', window.location.origin.replace(/:\d+/, '') + ':9002'],
+  ['/subapp/counter', window.location.origin.replace(/:\d+/, '') + ':9003'],
+]
 
 export function AppRoutes() {
   return (
@@ -17,7 +21,12 @@ export function AppRoutes() {
         <Route path={path} key={path}>
           <iframe
             src={src}
-            style={{width: '100vw', height: '100vh', border: 'none', backgroundColor: 'white'}}
+            style={{
+              width: '100vw',
+              height: '100vh',
+              border: 'none',
+              backgroundColor: 'white',
+            }}
           />
         </Route>
       ))}
