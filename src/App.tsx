@@ -9,6 +9,7 @@ import {Music} from './pages/Music'
 import ParticlesBg from 'particles-bg'
 
 const appConfigs = [
+  ['/download', window.location.origin.replace(/:\d+/, '') + ':8001'],
   ['/subapp/chart', window.location.origin.replace(/:\d+/, '') + ':9001'],
   ['/subapp/reserve', window.location.origin.replace(/:\d+/, '') + ':9002'],
   ['/subapp/counter', window.location.origin.replace(/:\d+/, '') + ':9003'],

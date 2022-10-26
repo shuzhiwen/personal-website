@@ -1,16 +1,16 @@
 export const getAboutSummary = () => {
   return [
     {
-      url: '/about',
-      title: '联系站主',
+      url: '/subapp/chart',
+      title: '轻量级2D图表库',
     },
     {
-      url: '/about',
-      title: '联系站主',
+      url: '/subapp/reserve',
+      title: 'H5预约系统',
     },
     {
-      url: '/about',
-      title: '联系站主',
+      url: '/subapp/counter',
+      title: '计数器',
     },
     {
       url: '/about',

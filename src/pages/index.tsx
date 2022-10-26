@@ -66,28 +66,28 @@ export function Home() {
     <Stack height="100vh" overflow="auto">
       <FadeSlideIn className={s.pageContainer}>
         <Section
-          title="主食"
+          title="生活碎片"
           description="切勿失去对生活的感知力"
           pageUrl="/living"
           image={livingImage}
           summaries={getLivingSummary()}
         />
         <Section
-          title="调味料"
+          title="兴趣爱好"
           description="为什么不来点音乐？"
           pageUrl="/music"
           image={musicImage}
           summaries={getMusicSummary()}
         />
         <Section
-          title="甜品"
+          title="精神食粮"
           description="爱，原来是一场自我教育"
           pageUrl="/article"
           image={articleImage}
           summaries={getArticleSummary()}
         />
         <Section
-          title="来壶茶"
+          title="关于我"
           description="猫猫这么可爱，不点一下吗？"
           pageUrl="/about"
           image={aboutImage}
