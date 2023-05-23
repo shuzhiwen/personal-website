@@ -1,39 +1,27 @@
+import styled from '@emotion/styled'
 import {Box} from '@mui/system'
-import {Suspense} from 'react'
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import {Home} from './pages'
-import {About} from './pages/About'
-import {Article} from './pages/Article'
-import {Living} from './pages/Living'
-import {Music} from './pages/Music'
 import ParticlesBg from 'particles-bg'
+import {Suspense} from 'react'
+import {Route, BrowserRouter as Router, Switch} from 'react-router-dom'
+import {Home} from './pages'
+import {About} from './pages/about'
+import {Article} from './pages/article'
+import {Living} from './pages/living'
+import {Music} from './pages/music'
 
 const appConfigs = [
   ['/download', window.location.origin.replace(/:\d+/, '') + ':8001'],
-  ['/subapp/chart', window.location.origin.replace(/:\d+/, '') + ':9001'],
-  ['/subapp/reserve', window.location.origin.replace(/:\d+/, '') + ':9002'],
-  ['/subapp/counter', window.location.origin.replace(/:\d+/, '') + ':9003'],
+  ['/app/chart', window.location.origin.replace(/:\d+/, '') + ':9001'],
+  ['/app/reserve', window.location.origin.replace(/:\d+/, '') + ':9002'],
+  ['/app/counter', window.location.origin.replace(/:\d+/, '') + ':9003'],
 ]
 
-export function AppRoutes() {
-  return (
-    <>
-      {appConfigs.map(([path, src]) => (
-        <Route path={path} key={path}>
-          <iframe
-            src={src}
-            style={{
-              width: '100vw',
-              height: '100vh',
-              border: 'none',
-              backgroundColor: 'white',
-            }}
-          />
-        </Route>
-      ))}
-    </>
-  )
-}
+const AppContainer = styled('iframe')({
+  width: '100vw',
+  height: '100vh',
+  border: 'none',
+  backgroundColor: 'white',
+})
 
 export function App() {
   return (
@@ -46,7 +34,11 @@ export function App() {
             <Route path="/article" component={Article} />
             <Route path="/living" component={Living} />
             <Route path="/music" component={Music} />
-            <AppRoutes />
+            {appConfigs.map(([path, src]) => (
+              <Route path={path} key={path}>
+                <AppContainer src={src} />
+              </Route>
+            ))}
           </Suspense>
         </Switch>
       </Router>

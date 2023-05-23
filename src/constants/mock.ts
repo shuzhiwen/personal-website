@@ -1,15 +1,15 @@
-export const getAboutSummary = () => {
+export const aboutSummaryMock = () => {
   return [
     {
-      url: '/subapp/chart',
+      url: '/app/chart',
       title: '轻量级2D图表库',
     },
     {
-      url: '/subapp/reserve',
+      url: '/app/reserve',
       title: 'H5预约系统',
     },
     {
-      url: '/subapp/counter',
+      url: '/app/counter',
       title: '计数器',
     },
     {
@@ -19,7 +19,7 @@ export const getAboutSummary = () => {
   ]
 }
 
-export const getArticleSummary = () => {
+export const articleSummaryMock = () => {
   return [
     {
       url: '/article',
@@ -40,7 +40,7 @@ export const getArticleSummary = () => {
   ]
 }
 
-export const getLivingSummary = () => {
+export const livingSummaryMock = () => {
   return [
     {
       url: '/living',
@@ -61,7 +61,7 @@ export const getLivingSummary = () => {
   ]
 }
 
-export const getMusicSummary = () => {
+export const musicSummaryMock = () => {
   return [
     {
       url: '/music',

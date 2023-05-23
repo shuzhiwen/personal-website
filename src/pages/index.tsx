@@ -1,18 +1,18 @@
+import {Avatar, Box, Card, List, ListItem, Stack, Typography} from '@mui/material'
 import {useState} from 'react'
 import {Link} from 'react-router-dom'
-import {FadeSlideIn, Placeholder} from '../components'
 import aboutImage from '../assets/images/about.jpg'
 import articleImage from '../assets/images/article.jpg'
 import livingImage from '../assets/images/living.jpg'
 import musicImage from '../assets/images/music.jpg'
-import {Avatar, Box, Card, List, ListItem, Stack, Typography} from '@mui/material'
-import s from './index.module.css'
+import {FadeSlideIn, Placeholder} from '../components'
+import {Footer} from '../components/Footer'
 import {
-  getAboutSummary,
-  getArticleSummary,
-  getLivingSummary,
-  getMusicSummary,
-} from '../posts/homeData'
+  aboutSummaryMock,
+  articleSummaryMock,
+  livingSummaryMock,
+  musicSummaryMock,
+} from '../constants/mock'
 
 function Section(props: {
   title: string
@@ -29,7 +29,7 @@ function Section(props: {
   const handleLoaded = () => setLoaded(true)
 
   return (
-    <Card className={s.card} sx={{textDecoration: 'none'}}>
+    <Card sx={{textDecoration: 'none'}}>
       <Link to={{pathname: pageUrl}}>
         <Placeholder loaded={loaded} height={180}>
           <Box position="relative">
@@ -63,57 +63,46 @@ function Section(props: {
 
 export function Home() {
   return (
-    <Stack height="100vh" overflow="auto">
-      <FadeSlideIn className={s.pageContainer}>
+    <Stack height="100vh" overflow="auto" justifyContent="space-between">
+      <FadeSlideIn
+        sx={{
+          padding: 8,
+          gridGap: 32,
+          display: 'grid',
+          placeContent: 'center',
+          gridTemplateColumns: 'repeat(auto-fill, 256px)',
+        }}
+      >
         <Section
           title="生活碎片"
           description="切勿失去对生活的感知力"
           pageUrl="/living"
           image={livingImage}
-          summaries={getLivingSummary()}
+          summaries={livingSummaryMock()}
         />
         <Section
           title="兴趣爱好"
           description="为什么不来点音乐？"
           pageUrl="/music"
           image={musicImage}
-          summaries={getMusicSummary()}
+          summaries={musicSummaryMock()}
         />
         <Section
           title="精神食粮"
           description="爱，原来是一场自我教育"
           pageUrl="/article"
           image={articleImage}
-          summaries={getArticleSummary()}
+          summaries={articleSummaryMock()}
         />
         <Section
           title="关于我"
           description="猫猫这么可爱，不点一下吗？"
           pageUrl="/about"
           image={aboutImage}
-          summaries={getAboutSummary()}
+          summaries={aboutSummaryMock()}
         />
       </FadeSlideIn>
       <Footer />
-    </Stack>
-  )
-}
-
-export function Footer() {
-  return (
-    <Stack width="100%" alignItems="center" pb={1}>
-      <a
-        href="https://beian.miit.gov.cn/"
-        rel="noreferrer"
-        target="_blank"
-        style={{
-          width: 'fit-content',
-          textDecoration: 'none',
-          fontSize: 12,
-        }}
-      >
-        浙ICP备20015270号-1
-      </a>
     </Stack>
   )
 }
