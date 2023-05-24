@@ -1,12 +1,12 @@
-import {Avatar, Box, Card, List, ListItem, Stack, Typography} from '@mui/material'
+import {Avatar, Card, List, ListItem, Stack, Typography} from '@mui/material'
 import {useState} from 'react'
 import {Link} from 'react-router-dom'
 import aboutImage from '../assets/images/about.jpg'
 import articleImage from '../assets/images/article.jpg'
 import livingImage from '../assets/images/living.jpg'
 import musicImage from '../assets/images/music.jpg'
-import {FadeSlideIn, Placeholder} from '../components'
-import {Footer} from '../components/Footer'
+import {FadeSlideIn, Footer, Placeholder} from '../components'
+import {FullStack} from '../components/Container'
 import {
   aboutSummaryMock,
   articleSummaryMock,
@@ -32,7 +32,7 @@ function Section(props: {
     <Card sx={{textDecoration: 'none'}}>
       <Link to={{pathname: pageUrl}}>
         <Placeholder loaded={loaded} height={180}>
-          <Box position="relative">
+          <Stack position="relative">
             <Avatar
               sx={{width: 300, height: 180}}
               variant="square"
@@ -47,7 +47,7 @@ function Section(props: {
                 {description}
               </Typography>
             </Stack>
-          </Box>
+          </Stack>
         </Placeholder>
       </Link>
       <List>
@@ -63,7 +63,7 @@ function Section(props: {
 
 export function Home() {
   return (
-    <Stack height="100vh" overflow="auto" justifyContent="space-between">
+    <FullStack justifyContent="space-between">
       <FadeSlideIn
         sx={{
           padding: 8,
@@ -103,6 +103,6 @@ export function Home() {
         />
       </FadeSlideIn>
       <Footer />
-    </Stack>
+    </FullStack>
   )
 }

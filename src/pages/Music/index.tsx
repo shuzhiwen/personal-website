@@ -1,9 +1,9 @@
-import {Empty, PageBox} from '../../components'
+import {Empty, ContentBox} from '../../components'
 
 export function Music() {
   return (
-    <PageBox>
+    <ContentBox>
       <Empty />
-    </PageBox>
+    </ContentBox>
   )
 }

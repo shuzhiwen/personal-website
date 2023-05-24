@@ -1,12 +1,16 @@
-import {ReactNode, Fragment} from 'react'
+import {Stack} from '@mui/material'
+import {Fragment, PropsWithChildren} from 'react'
 import ReactPlaceholder from 'react-placeholder'
 import {RectShape} from 'react-placeholder/lib/placeholders'
 import 'react-placeholder/lib/reactPlaceholder.css'
-import {Box} from '@mui/material'
 
-export function Placeholder(props: {loaded: boolean; height: number; children: ReactNode}) {
+type PlaceholderProps = PropsWithChildren<{
+  loaded: boolean
+  height: number
+}>
+
+export function Placeholder(props: PlaceholderProps) {
   const {loaded, height, children} = props
-
   return (
     <Fragment>
       <ReactPlaceholder
@@ -20,7 +24,7 @@ export function Placeholder(props: {loaded: boolean; height: number; children: R
       >
         {null}
       </ReactPlaceholder>
-      <Box sx={{display: loaded ? 'block' : 'none'}}>{children}</Box>
+      <Stack sx={{display: loaded ? 'block' : 'none'}}>{children}</Stack>
     </Fragment>
   )
 }

@@ -1,8 +1,8 @@
-import {Box, LinearProgress} from '@mui/material'
+import {LinearProgress, Stack} from '@mui/material'
 import {ReactNode, useCallback, useState} from 'react'
 import {FadeSlideIn} from './FadeSlideIn'
 
-export function PageBox(props: {children: ReactNode}) {
+export function ContentBox(props: {children: ReactNode}) {
   const [progress, setProgress] = useState(0)
   const handleScroll = useCallback(({target}) => {
     const {scrollTop, scrollHeight, clientHeight} = target
@@ -11,23 +11,20 @@ export function PageBox(props: {children: ReactNode}) {
   }, [])
 
   return (
-    <FadeSlideIn>
-      <Box
+    <FadeSlideIn sx={{height: '100%'}}>
+      <Stack
+        flex={1}
         onScroll={handleScroll}
         sx={{
-          margin: '5vh',
-          height: '90vh',
+          m: 4,
           borderRadius: '8px',
           backgroundColor: 'white',
           border: '1px lightgray solid',
           overflow: 'hidden',
-          '::-webkit-scrollbar': {
-            display: 'none',
-          },
         }}
       >
         <LinearProgress variant="determinate" value={progress} color="success" />
-        <Box
+        <Stack
           sx={{
             height: '100%',
             display: 'grid',
@@ -36,8 +33,8 @@ export function PageBox(props: {children: ReactNode}) {
           }}
         >
           {props.children}
-        </Box>
-      </Box>
+        </Stack>
+      </Stack>
     </FadeSlideIn>
   )
 }

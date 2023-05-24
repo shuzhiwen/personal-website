@@ -1,4 +1,5 @@
-export * from './Empty'
+export * from './Status'
 export * from './FadeSlideIn'
-export * from './PageBox'
+export * from './Footer'
+export * from './ContentBox'
 export * from './Placeholder'
