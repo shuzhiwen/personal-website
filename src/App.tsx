@@ -21,9 +21,9 @@ export function App() {
             <Route path="/article" component={Article} />
             <Route path="/living" component={Living} />
             <Route path="/music" component={Music} />
-            {appConfigs.map(({path, url, isMobile}) => (
+            {appConfigs.map(({path, url, web, mobile}) => (
               <Route path={path} key={path}>
-                <AppContainer src={url} isMobile={isMobile} />
+                <AppContainer src={url} web={web} mobile={mobile} />
               </Route>
             ))}
           </Suspense>

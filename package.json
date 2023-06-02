@@ -5,8 +5,8 @@
   "homepage": ".",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build": "yarn tsc2 && vite build",
+    "tsc2": "tsc && rm tsconfig.tsbuildinfo"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",

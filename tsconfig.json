@@ -1,22 +1,22 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
+    "composite": true,
+    "esModuleInterop": false,
     "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "module": "ESNext",
     "moduleResolution": "Node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "composite": true,
-    "plugins": [{"name": "typescript-plugin-css-modules"}]
+    "plugins": [{"name": "typescript-plugin-css-modules"}],
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ESNext",
+    "useDefineForClassFields": true
   },
   "include": ["src", "vite.config.ts"]
 }

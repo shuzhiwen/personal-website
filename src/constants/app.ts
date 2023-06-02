@@ -3,8 +3,9 @@ function getUrl(port: number) {
 }
 
 export const appConfigs = [
-  {path: '/download', url: getUrl(8001), isMobile: false},
-  {path: '/app/chart', url: getUrl(9001), isMobile: false},
-  {path: '/app/reserve', url: getUrl(9002), isMobile: true},
-  {path: '/app/counter', url: getUrl(9003), isMobile: false},
+  {path: '/download', url: getUrl(8001), web: true, mobile: true},
+  {path: '/app/chart', url: getUrl(9001), web: true, mobile: false},
+  {path: '/app/reserve', url: getUrl(9002), web: false, mobile: true},
+  {path: '/app/counter', url: getUrl(9003), web: true, mobile: false},
+  {path: '/game', url: getUrl(9004), web: true, mobile: true},
 ]
