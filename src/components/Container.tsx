@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import {Stack} from '@mui/material'
-import {CSSProperties} from 'react'
+import {AppConfig} from '../constants/app'
+import {useLocation} from 'react-router-dom'
 
 export const FullStack = styled(Stack)({
   width: '100%',
@@ -8,15 +9,22 @@ export const FullStack = styled(Stack)({
   overflow: 'auto',
 })
 
-export const AppContainer = styled('iframe')(
-  ({web, mobile, style}: {web: boolean; mobile: boolean; style?: CSSProperties}) => ({
-    width: '100%',
-    height: '100%',
-    border: 'none',
-    backgroundColor: 'white',
-    minWidth: web && !mobile ? 900 : undefined,
-    maxWidth: !web && mobile ? '70vh' : undefined,
-    margin: 'auto',
-    ...style,
-  })
-)
+export function SubAppContainer(props: AppConfig) {
+  const {path, url, web, mobile} = props
+  const {pathname} = useLocation()
+
+  return (
+    <iframe
+      src={url + pathname.replace(path, '')}
+      style={{
+        width: '100%',
+        height: '100%',
+        border: 'none',
+        backgroundColor: 'white',
+        minWidth: web && !mobile ? 900 : undefined,
+        maxWidth: !web && mobile ? '70vh' : undefined,
+        margin: 'auto',
+      }}
+    />
+  )
+}

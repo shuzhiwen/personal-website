@@ -2,7 +2,7 @@ import ParticlesBg from 'particles-bg'
 import {Suspense} from 'react'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import {Fallback} from './components'
-import {AppContainer, FullStack} from './components/Container'
+import {FullStack, SubAppContainer} from './components/Container'
 import {appConfigs} from './constants/app'
 import {Home} from './pages'
 import {About} from './pages/about'
@@ -21,9 +21,9 @@ export function App() {
             <Route path="/article" component={Article} />
             <Route path="/living" component={Living} />
             <Route path="/music" component={Music} />
-            {appConfigs.map(({path, url, web, mobile}) => (
-              <Route path={path} key={path}>
-                <AppContainer src={url} web={web} mobile={mobile} />
+            {appConfigs.map((item) => (
+              <Route path={item.path} key={item.path}>
+                <SubAppContainer {...item} />
               </Route>
             ))}
           </Suspense>
