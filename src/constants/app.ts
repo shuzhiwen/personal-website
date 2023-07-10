@@ -1,5 +1,9 @@
 function getUrl(port: number) {
-  return `${window.location.origin.replace(/:\d+/, '')}:${port}`
+  return `${
+    (import.meta as any).env.DEV
+      ? 'http://www.shuzhiwen.com'
+      : window.location.origin.replace(/:\d+/, '')
+  }:${port}`
 }
 
 export interface AppConfig {

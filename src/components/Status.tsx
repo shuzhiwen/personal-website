@@ -1,5 +1,5 @@
+import {CircularProgress, Stack, Typography} from '@mui/material'
 import emptyImage from '../assets/images/crying.svg'
-import {Stack, Typography} from '@mui/material'
 
 export function Empty() {
   return (
@@ -16,10 +16,10 @@ export function Empty() {
   )
 }
 
-export function Fallback() {
+export function Loading() {
   return (
-    <Stack alignItems="center">
-      <Typography>加载中...</Typography>
+    <Stack flex={1} alignItems="center" justifyContent="center">
+      <CircularProgress />
     </Stack>
   )
 }

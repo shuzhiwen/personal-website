@@ -29,7 +29,7 @@ export function ContentBox(props: {children: ReactNode}) {
             height: '100%',
             display: 'grid',
             placeContent: 'center',
-            overflow: 'scroll',
+            overflow: 'auto',
           }}
         >
           {props.children}
