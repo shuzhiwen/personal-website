@@ -1,6 +1,6 @@
-import anime from 'animejs'
-import {useEffect, useRef, ReactNode} from 'react'
 import {Stack, SxProps} from '@mui/material'
+import anime from 'animejs'
+import {ReactNode, useEffect, useRef} from 'react'
 
 export function FadeSlideIn(props: {sx?: SxProps; children: ReactNode}) {
   const {sx, children} = props
@@ -15,10 +15,10 @@ export function FadeSlideIn(props: {sx?: SxProps; children: ReactNode}) {
       })
       anime({
         targets: ref.current?.childNodes,
-        translateY: ['100%', 0],
+        scale: [0, 1],
         opacity: [0, 1],
         easing: 'easeOutCubic',
-        delay: anime.stagger(100),
+        delay: anime.stagger(200),
       })
     }, 100)
   }, [])

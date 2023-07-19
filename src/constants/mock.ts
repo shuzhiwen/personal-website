@@ -19,23 +19,23 @@ export const aboutSummaryMock = () => {
   ]
 }
 
-export const articleSummaryMock = () => {
+export const gameSummaryMock = () => {
   return [
     {
-      url: '/article',
-      title: '平平无奇的文章 #1',
+      url: '/game/gobang',
+      title: '联机五子棋',
     },
     {
-      url: '/article',
-      title: '平平无奇的文章 #2',
+      url: '/game',
+      title: '敬请期待',
     },
     {
-      url: '/article',
-      title: '平平无奇的文章 #3',
+      url: '/game',
+      title: '敬请期待',
     },
     {
-      url: '/article',
-      title: '平平无奇的文章 #4',
+      url: '/game',
+      title: '敬请期待',
     },
   ]
 }

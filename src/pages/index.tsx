@@ -9,7 +9,7 @@ import {FadeSlideIn, Footer, Placeholder} from '../components'
 import {FullStack} from '../components/Container'
 import {
   aboutSummaryMock,
-  articleSummaryMock,
+  gameSummaryMock,
   livingSummaryMock,
   musicSummaryMock,
 } from '../constants/mock'
@@ -88,11 +88,11 @@ export function Home() {
           summaries={musicSummaryMock()}
         />
         <Section
-          title="精神食粮"
-          description="爱，原来是一场自我教育"
-          pageUrl="/article"
+          title="玩玩小游戏"
+          description="精神的乌托邦"
+          pageUrl="/game"
           image={articleImage}
-          summaries={articleSummaryMock()}
+          summaries={gameSummaryMock()}
         />
         <Section
           title="关于我"
