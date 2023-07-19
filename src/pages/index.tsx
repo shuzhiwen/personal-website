@@ -1,4 +1,4 @@
-import {Avatar, Card, List, ListItem, Stack, Typography} from '@mui/material'
+import {Avatar, Card, Divider, List, ListItem, Stack, Typography} from '@mui/material'
 import {useState} from 'react'
 import {Link} from 'react-router-dom'
 import aboutImage from '../assets/images/about.jpg'
@@ -7,6 +7,7 @@ import livingImage from '../assets/images/living.jpg'
 import musicImage from '../assets/images/music.jpg'
 import {FadeSlideIn, Footer, Placeholder} from '../components'
 import {FullStack} from '../components/Container'
+import {isMobile} from '../constants/env'
 import {
   aboutSummaryMock,
   gameSummaryMock,
@@ -34,7 +35,7 @@ function Section(props: {
         <Placeholder loaded={loaded} height={180}>
           <Stack position="relative">
             <Avatar
-              sx={{width: 300, height: 180}}
+              sx={{width: '100%', height: '100%'}}
               variant="square"
               onLoad={handleLoaded}
               src={image}
@@ -51,11 +52,13 @@ function Section(props: {
         </Placeholder>
       </Link>
       <List>
-        {summaries.map(({url, title}, index) => (
-          <Link key={index} to={{pathname: url}}>
-            <ListItem>{title}</ListItem>
-          </Link>
-        ))}
+        <Stack divider={<Divider />}>
+          {summaries.map(({url, title}, index) => (
+            <Link key={index} to={{pathname: url}} style={{textDecoration: 'none'}}>
+              <ListItem>{title}</ListItem>
+            </Link>
+          ))}
+        </Stack>
       </List>
     </Card>
   )
@@ -66,11 +69,11 @@ export function Home() {
     <FullStack justifyContent="space-between">
       <FadeSlideIn
         sx={{
-          padding: 8,
-          gridGap: 32,
           display: 'grid',
           placeContent: 'center',
-          gridTemplateColumns: 'repeat(auto-fill, 256px)',
+          gridTemplateColumns: 'repeat(auto-fill, 280px)',
+          padding: isMobile ? 4 : 8,
+          gap: 4,
         }}
       >
         <Section
