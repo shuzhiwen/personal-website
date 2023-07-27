@@ -26,8 +26,8 @@ export const gameSummaryMock = () => {
       title: '联机五子棋',
     },
     {
-      url: '/game',
-      title: '敬请期待',
+      url: '/game/go',
+      title: '联机围棋',
     },
     {
       url: '/game',
@@ -44,19 +44,19 @@ export const livingSummaryMock = () => {
   return [
     {
       url: '/living',
-      title: '平平无奇的 Vlog #1',
+      title: '敬请期待',
     },
     {
       url: '/living',
-      title: '平平无奇的 Vlog #2',
+      title: '敬请期待',
     },
     {
       url: '/living',
-      title: '平平无奇的 Vlog #3',
+      title: '敬请期待',
     },
     {
       url: '/living',
-      title: '平平无奇的 Vlog #4',
+      title: '敬请期待',
     },
   ]
 }
@@ -65,19 +65,19 @@ export const musicSummaryMock = () => {
   return [
     {
       url: '/music',
-      title: '好听的歌曲 #1',
+      title: '敬请期待',
     },
     {
       url: '/music',
-      title: '好听的歌曲 #2',
+      title: '敬请期待',
     },
     {
       url: '/music',
-      title: '好听的歌曲 #3',
+      title: '敬请期待',
     },
     {
       url: '/music',
-      title: '好听的歌曲 #4',
+      title: '敬请期待',
     },
   ]
 }
