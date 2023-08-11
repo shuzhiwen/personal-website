@@ -30,7 +30,7 @@ function Section(props: {
   const handleLoaded = () => setLoaded(true)
 
   return (
-    <Card sx={{textDecoration: 'none'}}>
+    <Card sx={{width: 260}}>
       <Link to={{pathname: pageUrl}}>
         <Placeholder loaded={loaded} height={180}>
           <Stack position="relative">
@@ -69,9 +69,9 @@ export function Home() {
     <FullStack justifyContent="space-between">
       <FadeSlideIn
         sx={{
-          display: 'grid',
-          placeContent: 'center',
-          gridTemplateColumns: 'repeat(auto-fill, 280px)',
+          flexWrap: 'wrap',
+          flexDirection: 'row',
+          justifyContent: 'center',
           padding: isMobile ? 4 : 8,
           gap: 4,
         }}

@@ -30,8 +30,8 @@ export const gameSummaryMock = () => {
       title: '联机围棋',
     },
     {
-      url: '/game',
-      title: '敬请期待',
+      url: '/game/chinese',
+      title: '联机象棋',
     },
     {
       url: '/game',
