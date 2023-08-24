@@ -14,7 +14,7 @@ export const FullStack = styled(Stack)({
 export function SubAppContainer(props: AppConfig) {
   const [loading, setLoading] = useState(true)
   const {path, url, web, mobile} = props
-  const {pathname} = useLocation()
+  const {pathname, search} = useLocation()
 
   return (
     <>
@@ -24,7 +24,7 @@ export function SubAppContainer(props: AppConfig) {
         </Stack>
       )}
       <iframe
-        src={url + pathname.replace(path, '')}
+        src={url + pathname.replace(path, '') + search}
         onLoad={() => setLoading(false)}
         style={{
           width: '100%',
