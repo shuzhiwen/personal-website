@@ -16,8 +16,8 @@ ReactDOM.render(
   <React.StrictMode>
     <FullStack position="fixed">
       <BrowserRouter>
-        <Switch>
-          <Suspense fallback={<Loading />}>
+        <Suspense fallback={<Loading />}>
+          <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/article" component={Article} />
@@ -28,8 +28,8 @@ ReactDOM.render(
                 <SubAppContainer {...item} />
               </Route>
             ))}
-          </Suspense>
-        </Switch>
+          </Switch>
+        </Suspense>
       </BrowserRouter>
       <ParticlesBg type="square" bg />
     </FullStack>

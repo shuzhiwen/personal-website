@@ -1,7 +1,7 @@
 function getUrl(port: number) {
   return `${
     (import.meta as any).env.DEV
-      ? 'http://www.shuzhiwen.com'
+      ? 'https://www.shuzhiwen.com'
       : window.location.origin.replace(/:\d+/, '')
   }:${port}`
 }
@@ -19,4 +19,5 @@ export const appConfigs: AppConfig[] = [
   {path: '/app/reserve', url: getUrl(9002), web: false, mobile: true},
   {path: '/app/counter', url: getUrl(9003), web: true, mobile: false},
   {path: '/game', url: getUrl(9004), web: true, mobile: true},
+  {path: '*', url: getUrl(7001), web: true, mobile: true},
 ]
