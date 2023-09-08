@@ -5,6 +5,7 @@ export function Footer() {
     <Stack width="100%" alignItems="center" pb={1}>
       <Link
         href="https://beian.miit.gov.cn/"
+        color="whitesmoke"
         rel="noreferrer"
         target="_blank"
         underline="none"

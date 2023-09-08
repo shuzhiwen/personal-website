@@ -1,4 +1,3 @@
-import ParticlesBg from 'particles-bg'
 import React, {Suspense} from 'react'
 import ReactDOM from 'react-dom'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
@@ -31,7 +30,6 @@ ReactDOM.render(
           </Switch>
         </Suspense>
       </BrowserRouter>
-      <ParticlesBg type="square" bg />
     </FullStack>
   </React.StrictMode>,
   document.getElementById('root')
