@@ -22,15 +22,15 @@ export const aboutSummaryMock = () => {
 export const gameSummaryMock = () => {
   return [
     {
-      url: '/game/gobang',
+      url: '/game/gobang/login',
       title: '联机五子棋',
     },
     {
-      url: '/game/go',
+      url: '/game/go/login',
       title: '联机围棋',
     },
     {
-      url: '/game/chinese',
+      url: '/game/chinese/login',
       title: '联机象棋',
     },
     {
