@@ -1,11 +1,10 @@
-import {Avatar, Card, Divider, List, ListItem, Stack, Typography} from '@mui/material'
-import {useState} from 'react'
+import {Card, Divider, List, ListItem, Stack, Typography} from '@mui/material'
 import {Link} from 'react-router-dom'
-import aboutImage from '../assets/images/about.jpg'
-import articleImage from '../assets/images/article.jpg'
-import livingImage from '../assets/images/living.jpg'
-import musicImage from '../assets/images/music.jpg'
-import {FadeSlideIn, Footer, Placeholder} from '../components'
+import livingImage from '../assets/images/bg1.jpg'
+import musicImage from '../assets/images/bg2.jpg'
+import articleImage from '../assets/images/bg3.jpg'
+import aboutImage from '../assets/images/bg4.jpg'
+import {FadeSlideIn, Footer} from '../components'
 import {FullStack} from '../components/Container'
 import {isMobile} from '../constants/env'
 import {
@@ -25,27 +24,25 @@ function Section(props: {
   }[]
 }) {
   const {title, pageUrl, image, summaries} = props
-  const [loaded, setLoaded] = useState(false)
-  const handleLoaded = () => setLoaded(true)
 
   return (
     <Card sx={{width: 260}}>
       <Link to={{pathname: pageUrl}}>
-        <Placeholder loaded={loaded} height={180}>
-          <Stack position="relative">
-            <Avatar
-              sx={{width: '100%', height: '100%'}}
-              variant="square"
-              onLoad={handleLoaded}
-              src={image}
-            />
-            <Stack position="absolute" top={0} left={0} spacing={1} p={2} color="white">
-              <Typography variant="h6" color="whitesmoke" fontWeight="bold">
-                {title}
-              </Typography>
-            </Stack>
+        <Stack
+          sx={{
+            position: 'relative',
+            background: `linear-gradient(rgba(0,0,0,.2), rgba(0,0,0,.2)),url(${image})`,
+            backgroundSize: 'cover',
+            width: '100%',
+            height: 180,
+          }}
+        >
+          <Stack position="absolute" top={0} left={0} spacing={1} p={2}>
+            <Typography variant="h5" color="whitesmoke" fontWeight="bold">
+              {title}
+            </Typography>
           </Stack>
-        </Placeholder>
+        </Stack>
       </Link>
       <List>
         <Stack divider={<Divider />}>
