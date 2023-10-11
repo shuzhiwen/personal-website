@@ -9,12 +9,12 @@ export const aboutSummaryMock = () => {
       title: 'H5预约系统',
     },
     {
-      url: '/app/counter',
-      title: '计数器',
+      url: '/about',
+      title: '联系站主',
     },
     {
       url: '/about',
-      title: '联系站主',
+      title: '敬请期待',
     },
   ]
 }
