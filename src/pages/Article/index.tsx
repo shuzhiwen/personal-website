@@ -1,4 +1,4 @@
-import {Empty, ContentBox} from '../../components'
+import {ContentBox, Empty} from '../../components'
 
 export function Article() {
   return (

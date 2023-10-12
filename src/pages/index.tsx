@@ -4,8 +4,7 @@ import livingImage from '../assets/images/bg1.jpg'
 import musicImage from '../assets/images/bg2.jpg'
 import articleImage from '../assets/images/bg3.jpg'
 import aboutImage from '../assets/images/bg4.jpg'
-import {FadeSlideIn, Footer} from '../components'
-import {FullStack} from '../components/Container'
+import {FadeSlideIn, Footer, FullStack, Github} from '../components'
 import {isMobile} from '../constants/env'
 import {
   aboutSummaryMock,
@@ -60,6 +59,7 @@ function Section(props: {
 export function Home() {
   return (
     <FullStack justifyContent="space-between">
+      <Github />
       <FadeSlideIn
         sx={{
           flexWrap: 'wrap',
