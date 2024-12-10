@@ -13,7 +13,7 @@ import {Music} from './pages/music'
 ReactDOM.render(
   <React.StrictMode>
     <FullStack position="fixed">
-      <BrowserRouter>
+      <BrowserRouter basename="personal-website">
         <Suspense fallback={<Loading />}>
           <Switch>
             <Route exact path="/" component={Home} />
